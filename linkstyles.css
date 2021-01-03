@@ -1,0 +1,12 @@
+body{
+    background-color: slategray;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+button:nth-child(1){
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-left: 40%;
+    cursor: pointer;
+
+}

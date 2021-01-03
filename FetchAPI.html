@@ -1,18 +1,34 @@
 <link href="./linkstyles.css"  rel="stylesheet" ></link>
-<body>
-<button id="gettext">GetText</button>
-<button id="getusers">GetUsers</button>
-<hr>
-<form id="addposts">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-<div>
-<input type="text" id="title" placeholder="Title"/><br>
-<input type="textarea" id="textarea" placeholder="body"/><br>
-<input type="submit"/><br>
-    </div>
-</form >
+<body>
+    <div class="container">
+        <h1 class="display-4.mb-4">Fetch API</h1>
+<div class="d-flex">
+        <button class="btn btn-primary mr-4" id="gettext">GetText</button>
+        <button class="btn btn-success mr-4" id="getusers">GetUsers</button>
+</div>
+<hr>
+
+
+<form id="addposts" >
+<div class="form-group">
+<input type="text" id="title" placeholder="Title" class="form-control"/><br>
+</div>
+<div class="form-group">
+<textarea id="textarea" placeholder="body" class="form-control"> </textarea>  <br>
+</div>
+
+
+<input type="submit"class="btn btn-secondary"/><br>
+
+</form>
+</div>
+
+
 <label id="labeltext"></label>
 <label id="labelusers"></label>
+</div>
 <script>
 function gettext()
 {
