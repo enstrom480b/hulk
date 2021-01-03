@@ -1,0 +1,85 @@
+<link href="./linkstyles.css"  rel="stylesheet" ></link>
+<body>
+<button id="gettext">GetText</button>
+<button id="getusers">GetUsers</button>
+<hr>
+<form id="addposts">
+
+<div>
+<input type="text" id="title" placeholder="Title"/><br>
+<input type="textarea" id="textarea" placeholder="body"/><br>
+<input type="submit"/><br>
+    </div>
+</form >
+<label id="labeltext"></label>
+<label id="labelusers"></label>
+<script>
+function gettext()
+{
+  const promise=fetch('https://jsonplaceholder.typicode.com/posts',{
+ 
+    method: 'GET', 
+    
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      
+     
+    })
+    const promise2=promise.then(function(data){
+    
+        return data.json()
+    })
+
+    var el=document.getElementById('labeltext')
+   
+    promise2.then(function(data){
+  let output='<h2>users</h2>'
+    data.forEach(element => {
+   el.innerHTML+='<ul><li style="background-color:beige;list-style-type: none"><h3>Id:</h3>'+element.id+'</li><li<li style="background-color:beige;list-style-type: none><h3>Title:</h3>'+element.title+'</li><li style="background-color:beige;list-style-type: none><h3>Body:</h3>'+element.body+'</li></ul>'
+   });
+    }) 
+
+}
+function getusers()
+{
+
+     
+}
+function addusers(e)
+{
+e.preventDefault()
+var title=document.getElementById('title').value
+var body=document.getElementById('textarea').value
+    const promise= fetch('https://jsonplaceholder.typicode.com/posts',{
+
+        method:'POST',
+        headers:{
+            Accept:'application/json,text/plain,*/*',
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify({title:title,body:body})
+     })
+     const promise2=promise.then((res)=>{
+                res.json()
+     })
+
+    promise2.then(function(data){
+             console.log(data)
+    }) 
+
+
+}
+var t=document.getElementById('gettext')
+t.addEventListener('click',gettext)
+
+var t2=document.getElementById('getusers')
+t2.addEventListener('click',getusers)
+
+var t3=document.getElementById('addposts')
+t3.addEventListener('submit',addusers)
+
+
+</script>
+
+   </body>
