@@ -1,0 +1,53 @@
+<a href="#" data-img="img1" onclick="fn(this)" id="imgs1">link1</a><br>
+<a href="#" data-img="img2" onclick="fn(this)" id="imgs2">link2</a><br>
+<a href="#" data-img="img3" onclick="fn(this)" id="imgs3">link3</a><br>
+<a href="#" data-img="img4" onclick="fn(this)" id="imgs4">link4</a><br>
+<img src="1.jpg" id="img1"  class="hide"	name="hd">
+<img src="2.jpg" id="img2"  class="hide"	name="hd">
+<img src="3.jpg" id="img3"  class="hide"	name="hd">
+<img src="4.jpg" id="img4"  class="hide"	name="hd">
+<style>
+.hide
+{
+display:none;
+}
+show
+{
+display:initial;
+}
+</style>
+<script>
+
+function fn(btn)
+{
+pic=document.getElementById(btn.dataset.img)
+var pix=document.getElementsByName('hd')
+for(item of pix)
+{
+item.className='hide'
+}
+if(pic)
+{
+pic.className='show'
+}
+}
+/*
+function fn(btn)
+{var hide=document.getElementsByName('hd')
+for(i=0;i<hide.length;i++)
+{
+hide[i].className='hide'
+}
+var hide=document.getElementsByName('hd')
+var pic=document.getElementById(btn.attributes['data-img'].value)
+if(pic)
+{
+pic.className='show'
+}
+else
+{
+pic.className='hide'
+}
+}
+*/
+</script>
