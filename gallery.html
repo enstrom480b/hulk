@@ -1,0 +1,88 @@
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+<link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+<div class="cont">
+<ul class="ul">
+<li class="active"><a href="lists.html">Home</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="about.html">Contact</a></li>
+</ul>
+<div class="div">
+<h2>Laini Saba</h2>
+<p style="color:red;position:absolute;top:9px;left:120px; width:150px">Pri School</p>
+</div>
+<section class="content">
+<div class="slider-container">
+<div class="slider-outer">
+<img class="prev" src="images/left.jpg"alt="prev"/>
+<div class="slider-inner">
+<img style="width:400px;height:400px" src="images/1.jpg" class="active"/>
+<img style="width:400px;height:400px" src="images/2.jpg"/>
+<img style="width:400px;height:400px" src="images/3.jpg" />
+<img style="width:400px;height:400px" src="images/4.jpg" />
+<img style="width:400px;height:400px" src="images/5.jpg"/>
+</div>
+<img  class="next" src="images/right.png"alt="next"/>
+</div>
+</div>
+
+<h5 class="card-title">Narcotics control</h5>
+<p class="card-text"> Measures to control the illicit movement of narcotics and psychotropic substances by air.
+Non-restricted area Areas of an airport to which the public has access or to which access is otherwise unrestricted.
+Off airport processing facilities
+A passenger or cargo linked terminal at an urban population centre at which processing facilities are provided.
+Operator
+A person, organization or enterprise engaged in or offering to engage in an aircraft operation. 
+Passenger area
+All the ground space and facilities provided for passenger processing. It includes aprons, passenger buildings, vehicle parks and roads.
+Permits
+Cards or other documentation issued to individual persons employed on airports or who otherwise have need for authorized access to airports or to any restricted part(s) thereof, for the purpose of facilitating access and identifying the individual and includes vehicle documentation issued for similar purposes.
+Permits are sometimes referred to as Airport Identity/Movement Cards or Passes
+Pier
+A corridor at above or below ground level to connect aircraft stands to a passenger building.
+Prohibited Articles
+These are articles which passengers should not be allowed (without valid, lawful reason) to take with them on board an aircraft because they would constitute a threat to the security of the aircraft
+Regulated agent
+An agent, freight forwarder or any other entity that conducts business with an operator and provides security controls that are 
+</p>
+</section>
+</body>
+
+<script>
+$(document).ready(function()
+{
+$('.next').on('click',function()
+{
+var currentImage=$('.active')
+var nextimage=currentImage.next()
+if(nextimage.length)
+{
+currentImage.removeClass('active').css('z-index',10)
+nextimage.addClass('active').css('zindex',10)
+}
+})
+
+$('.prev').on('click',function()
+{
+var prev=$('.active')
+var previmage=prev.prev()
+if(previmage.length)
+{
+prev.removeClass('active').css('z-index',10)
+previmage.addClass('active').css('zindex',10)
+}
+})
+
+})
+
+
+</script>
+<style>
+
+</style>
